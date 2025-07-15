@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jaimevirr</title>
+  <meta name="description" content="Jaime Virgili web, proyectos">
+  <meta name="keywords" content="Jaimevirr, Jaime Virgili, publicidad, proyectos, fotografía, diseño">
+  <link rel="stylesheet" href="estilos.css" />
+  <link rel="stylesheet" href="columna.css" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="inicio.html" class="logo">Jaimevirr</a>
+      <ul class="nav-menu">
+        <li><a href="inicio.html">Sobre mí</a></li>
+        <li><a href="proyectos.html">Proyectos</a></li>
+        <li><a href="galeria.html">Música</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Carousel principal -->
+  <section class="carrusel">
+    <button class="flecha prev" aria-label="Anterior">‹</button>
+    <div class="pista">
+      <div class="espacio-inicial"></div>
+
+      <a href="proyectos/fotografia.pdf" target="_blank" class="item">
+        <img src="img/dossier.png" description="jaimevirr" alt="Jaime Virgili" long-description="Jaime Virgili web" title="jaimevirr" legend="Jaime Virgili web">
+      </a>
+      <a href="proyectos/sex.pdf" target="_blank" class="item">
+        <img src="img/sex.png" description="jaimevirr" alt="Jaime Virgili" long-description="Jaime Virgili web" title="jaimevirr" legend="Jaime Virgili web" />
+      </a>
+      <a href="proyectos/ladron.pdf" target="_blank" class="item">
+        <img src="img/ladron.png" description="jaimevirr" alt="Jaime Virgili" long-description="Jaime Virgili web" title="jaimevirr" legend="Jaime Virgili web" />
+      </a>
+      <a href="proyectos/fe.mp4" target="_blank" class="item">
+        <img src="img/fe.png" description="jaimevirr" alt="Jaime Virgili" long-description="Jaime Virgili web" title="jaimevirr" legend="Jaime Virgili web">
+      </a>
+      <a href="proyectos/marga.pdf" target="_blank" class="item">
+        <img src="img/marga.png" description="jaimevirr" alt="Jaime Virgili" long-description="Jaime Virgili web" title="jaimevirr" legend="Jaime Virgili web" />
+      </a>
+      <a href="proyectos/kerch.pdf" target="_blank" class="item">
+        <img src="img/kerch.png" description="jaimevirr" alt="Jaime Virgili" long-description="Jaime Virgili web" title="jaimevirr" legend="Jaime Virgili web" />
+      </a>
+      <a href="proyectos/soriano.pdf" target="_blank" class="item">
+        <img src="img/soriano.png" description="jaimevirr" alt="Jaime Virgili" long-description="Jaime Virgili web" title="jaimevirr" legend="Jaime Virgili web" />
+      </a>
+    </div>
+  </section>
+
+  <!-- Carrusel invertido debajo -->
+  <section class="carrusel carrusel-invertido">
+    <div class="pista">
+      <a href="https://galindovirgilijaim.wixsite.com/standpoint" target="_blank" class="item">
+        <img src="img/standpoint.png" description="jaimevirr" alt="Jaime Virgili" long-description="Jaime Virgili web" title="jaimevirr" legend="Jaime Virgili web">
+      </a>
+      <a href="proyectos/poema.mov" target="_blank" class="item">
+        <img src="img/poema.png" description="jaimevirr" alt="Jaime Virgili" long-description="Jaime Virgili web" title="jaimevirr" legend="Jaime Virgili web">
+      </a>
+      <a href="proyectos/asisa.pdf" target="_blank" class="item">
+        <img src="img/asisa.png" description="jaimevirr" alt="Jaime Virgili" long-description="Jaime Virgili web" title="jaimevirr" legend="Jaime Virgili web">
+      </a>
+      <a href="proyectos/thirdhalf.pdf" target="_blank" class="item">
+        <img src="img/thirdhalf.png" description="jaimevirr" alt="Jaime Virgili" long-description="Jaime Virgili web" title="jaimevirr" legend="Jaime Virgili web" />
+      </a>
+      <a href="proyectos/juana.pdf" target="_blank" class="item">
+        <img src="img/juana.png" description="jaimevirr" alt="Jaime Virgili" long-description="Jaime Virgili web" title="jaimevirr" legend="Jaime Virgili web">
+      </a>
+      <a href="proyectos/wicked.pdf" target="_blank" class="item">
+        <img src="img/wicked.png" description="jaimevirr" alt="Jaime Virgili" long-description="Jaime Virgili web" title="jaimevirr" legend="Jaime Virgili web">
+      </a>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true });
+  </script>
+  <script>
+    document.body.classList.add("loading");
+
+    window.addEventListener("DOMContentLoaded", () => {
+      setTimeout(() => {
+        document.body.classList.remove("loading");
+      }, 50);
+    });
+
+    document.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", function (e) {
+        const href = this.getAttribute("href");
+        if (!href.startsWith("#") && href !== "" && href !== null) {
+          e.preventDefault();
+          document.body.classList.add("fade-zoom-out");
+          setTimeout(() => {
+            window.location.href = href;
+          }, 500);
+        }
+      });
+    });
+  </script>
+
+  <div class="columnabajona">
+    Copyright 2025 | Jaime Virgili |
+    <a href="mailto:jaimevirgilig@gmail.com?subject=quiero colaborar&body=Hola Jaime! Me gustaría escribirte para...">
+      jaimevirgilig@gmail.com
+    </a>
+  </div>
+</body>
+</html>

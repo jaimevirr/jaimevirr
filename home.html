@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <link rel="stylesheet" href="estilos.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jaimevirrweb</title>
+  </head>
+  <body class="fullscreen-video" style="margin:0;font-family:Arial,Helvetica,sans-serif;scroll-behavior:smooth;">
+    <!-- Sección HERO: Video a pantalla completa -->
+    <img
+      src="img/portada.mp4"           
+      autoplay
+      muted
+      loop
+      playsinline
+      style="width:100vw;height:100vh;object-fit:cover;display:block;"
+    ></img>
+    <div class="overlay">
+ <a href="inicio.html" class="boton">entrar</a>
+  <script>
+  document.body.classList.add("loading");
+  window.addEventListener("DOMContentLoaded", () => {
+    setTimeout(() => {
+      document.body.classList.remove("loading");
+    }, 50);
+  });
+
+  document.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", function (e) {
+      const href = this.getAttribute("href");
+      if (!href.startsWith("#") && href !== "" && href !== null) {
+        e.preventDefault();
+        document.body.classList.add("fade-zoom-out");
+        setTimeout(() => {
+          window.location.href = href;
+        }, 500);
+      }
+    });
+  });
+</script>
+
+</body>
+
+
+   

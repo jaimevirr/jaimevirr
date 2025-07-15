@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jaimevirr</title>
+  <link rel="stylesheet" href="estilos.css" />
+  <link rel="stylesheet" href="columna.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="inicio.html" class="logo">Jaimevirr</a>
+      <ul class="nav-menu">
+        <li><a href="inicio.html">Sobre mí</a></li>
+        <li><a href="proyectos.html">Proyectos</a></li>
+        <li><a href="galeria.html">Música</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="contact-section">
+    <h2>Contáctame</h2>
+    <div class="contact-info">
+      <p>Teléfono: <a href="tel:+34684659353" class="contact-link">+34 684 659 353</a></p>
+      <p>Email: <a href="mailto:jaimevirgilig@gmail.com?subject=quiero colaborar&body=Hola Jaime! Me gustaría escribirte para..." class="contact-link">
+        jaimevirgilig@gmail.com
+      </a></p>
+    </div>
+  </section>
+  <section class="snakegame-wrapper">
+    <div class="snakegame-container">
+      <iframe src="juegos/snake.html" class="snakegame" title="Jaime's Snake"></iframe>
+    </div>
+  </section>
+
+  <script>
+    document.body.classList.add("loading");
+
+    window.addEventListener("DOMContentLoaded", () => {
+      setTimeout(() => {
+        document.body.classList.remove("loading");
+      }, 50);
+    });
+
+    document.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", function (e) {
+        const href = this.getAttribute("href");
+        if (!href.startsWith("#") && href !== "" && href !== null) {
+          e.preventDefault();
+          document.body.classList.add("fade-zoom-out");
+          setTimeout(() => {
+            window.location.href = href;
+          }, 500);
+        }
+      });
+    });
+  </script>
+
+  <div class="columnabajona">
+    Copyright 2025 | Jaime Virgili | 
+    <a href="mailto:jaimevirgilig@gmail.com?subject=quiero colaborar&body=Hola Jaime! Me gustaría escribirte para...">
+      jaimevirgilig@gmail.com
+    </a>
+  </div>
+</body>
+</html>

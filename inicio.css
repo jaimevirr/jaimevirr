@@ -1,0 +1,12 @@
+.contenedor-texto-imagen {
+  display: flex;
+  flex-direction: column; /* pone los hijos en columna (vertical) */
+  align-items: center; /* centra horizontalmente */
+  gap: 10px; /* espacio entre texto e imagen */
+}
+
+.imagen-hiss {
+  max-width: 100%; /* para que la imagen sea responsiva */
+  height: auto;
+  display: block;
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jaime Virr | Jaime Virgili</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Portafolio y proyectos de Jaime Virr (Jaime Virgili)">
+  <meta name="keywords" content="Jaime Virgili,portafolio, proyectos, música">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="estilos.css">
+  <link rel="stylesheet" href="columna.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+</head>
+<body>
+
+  <nav class="navbar" aria-label="Navegación principal">
+    <div class="navbar-container">
+      <a href="inicio.html" class="logo">Jaimevirr</a>
+      <ul class="nav-menu">
+        <li><a href="inicio.html">Sobre mí</a></li>
+        <li><a href="proyectos.html">Proyectos</a></li>
+        <li><a href="galeria.html">Música</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <p class="texto-animado" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="1500" data-aos-delay="200">
+    "The most important thing is to always trust your gut"
+  </p>
+
+  <div class="asturias" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="1500" data-aos-delay="200">
+    <a href="proyectos.html">
+      <img src="img/jaime.JPG" description="jaimevirr" alt="Jaime Virgili" long-description="Jaime Virgili web" title="jaimevirr" legend="Jaime Virgili web">
+    </a>
+  </div>
+<section class="video-section">
+  <h2 id="hotter"> younger and hotter than me - selena gomez </h2> 
+  <div class="video-container">
+    <iframe 
+      src="https://www.youtube.com/embed/B783S7tAPOY" 
+      title="Selena Gomez, benny blanco - Younger And Hotter Than Me (Official Music Video)"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+  </div>
+</section>
+
+  <div class="columnabajona">
+    &copy; 2025 | Jaime Virgili |
+    <a href="mailto:jaimevirgilig@gmail.com?subject=quiero colaborar&amp;body=Hola Jaime! Me gustaría escribirte para...">
+      jaimevirgilig@gmail.com
+    </a>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true });
+  </script>
+  <script>
+    document.body.classList.add("loading");
+
+    window.addEventListener("DOMContentLoaded", () => {
+      setTimeout(() => {
+        document.body.classList.remove("loading");
+      }, 50);
+    });
+
+    document.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", function (e) {
+        const href = this.getAttribute("href");
+        if (!href.startsWith("#") && href !== "" && href !== null) {
+          e.preventDefault();
+          document.body.classList.add("fade-zoom-out");
+          setTimeout(() => {
+            window.location.href = href;
+          }, 500);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
